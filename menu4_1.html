@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>jejudo_gahee</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src="./js/quick.js"></script>
+    <style>
+    @font-face {
+    font-family: 'BMHANNAAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.0/BMHANNAAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.header{background-color: rgba(237, 237, 237, 0.24);}
+        .header .lnb>ul>li:nth-child(4)>a {
+            color: #ffa81c;}
+        .header h1 a,
+        .lnb>ul>li>a {
+            color: #333
+        }
+        .header:hover h1>a,
+        .header:hover .lnb>ul>li>a
+            {color: #333;}
+
+        .contents {
+            clear: both;
+            overflow: hidden;
+        }
+        .shadow{
+           width: 100%;
+            height: 600px;
+            overflow: hidden;
+        }
+
+        .section1 {
+            background-image: linear-gradient( rgba(237, 237, 237, 0.27), rgba(237, 237, 237, 0.24) ), url(./img/banner7.jpg);
+            width: 100%;
+            height: 600px;
+            background-size: cover;
+            background-position: center right;
+            position: relative;
+            display: block;
+            animation: Ani 5s forwards
+        }
+        @keyframes Ani{
+            100%{transform: scale(1.1)}
+        }
+        
+        .section1 .mainText {
+            font-size: 50px;
+            color: rgb(255, 255, 255);
+            padding-top: 280px;
+            text-align: center;
+            font-family: 'WandohopeB';
+            text-shadow: 2px 0px 3px #000000;
+            font-weight: bold
+        }
+        article{
+            height: 70px;
+            width: 100%;
+            background-color: #fff;
+            line-height: 70px;
+            font-size: 16px;
+/*            border-bottom: 1px solid rgba(128, 128, 128, 0.38);*/
+            
+        }
+        article>p{
+            margin-left: 150px;
+            line-height: 70px;
+            font-family: 'Noto Sans KR', sans-serif;
+            word-spacing: 0.2em
+        }
+        article span{
+            display: inline-block;
+            background-color: #7bc129;
+            box-sizing: border-box;
+            height: 70px;
+            width: 70px;
+            text-align: center;
+            color: #fff
+        }    
+        .section2 {
+            width: 100%;
+           background:linear-gradient(rgba(255, 246, 198, 0.85) ,transparent)
+        }
+        
+        .section2 .section2Inner{width: 1100px; margin: auto; }
+        
+
+        
+        
+
+
+
+
+        .footerTop{
+            background: linear-gradient(transparent, #9b9385);
+            height: 200px;
+            width: 100%;
+            overflow: hidden
+        }
+        .footer {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <div class="header">
+            <h1><a href="./index.html">JeJu</a>
+            </h1>
+            <div class="lnb">
+                <ul>
+                    <li>
+                        <a href="#">관광지도</a>
+                        <div>
+                            <table>
+                                <tr>
+                                    <td><a href="./travel/menu1.html">관광지도</a></td>
+                                    <td><a href="./menu2.html">추천여행</a><span class="menuCir"></span></td>
+                                    <td><a href="./menu3.html">테마추천</a></td>
+                                    <td><a href="./menu4_3.html">문의하기</a><span class="menuCir"></span></td>
+                                    <td><a href="./menu5.html">나의여행</a><span class="menuCir"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./travel/menu1.html">제주도소개</a><span class="menuCir"></span></td>
+                                    <td><a href="#">이달의추천</a></td>
+                                    <td><a href="#">테마코스추천</a></td>
+                                    <td><a href="./menu4.html">공지사항</a><span class="menuCir"></span></td>
+                                    <td><a href="#">찜한여행</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./travel/menu1_photo.html">포토갤러리</a><span class="menuCir"></span></td>
+                                    <td><a href="#">추천코스</a></td>
+                                    <td><a href="#">제주도 VR</a></td>
+                                    <td><a href="./menu4_2.html">이벤트</a><span class="menuCir"></span></td>
+                                    <td><a href="#">나의리뷰</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">제주이야기</a></td>
+                                    <td><a href="#">구석구석명소</a></td>
+                                    <td><a href="#">제주문화공연</a></td>
+                                    <td><a href="#">여행필수정보</a></td>
+                                    <td><a href="#">정보수정</a></td>
+                                </tr>
+                            </table>
+                            
+                        </div>
+                    </li>
+                    <li><a href="#">추천여행</a>
+                        <div>
+                            <table>
+                                <tr>
+                                    <td><a href="./travel/menu1.html">관광지도</a></td>
+                                    <td><a href="./menu2.html">추천여행</a><span class="menuCir"></span></td>
+                                    <td><a href="./menu3.html">테마추천</a></td>
+                                    <td><a href="./menu4_3.html">문의하기</a><span class="menuCir"></span></td>
+                                    <td><a href="./menu5.html">나의여행</a><span class="menuCir"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./travel/menu1.html">제주도소개</a><span class="menuCir"></span></td>
+                                    <td><a href="#">이달의추천</a></td>
+                                    <td><a href="#">테마코스추천</a></td>
+                                    <td><a href="./menu4.html">공지사항</a><span class="menuCir"></span></td>
+                                    <td><a href="#">찜한여행</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./travel/menu1_photo.html">포토갤러리</a><span class="menuCir"></span></td>
+                                    <td><a href="#">추천코스</a></td>
+                                    <td><a href="#">제주도 VR</a></td>
+                                    <td><a href="./menu4_2.html">이벤트</a><span class="menuCir"></span></td>
+                                    <td><a href="#">나의리뷰</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">제주이야기</a></td>
+                                    <td><a href="#">구석구석명소</a></td>
+                                    <td><a href="#">제주문화공연</a></td>
+                                    <td><a href="#">여행필수정보</a></td>
+                                    <td><a href="#">정보수정</a></td>
+                                </tr>
+                            </table>
+                            
+                        </div>
+                    </li>
+                    <li><a href="#">테마추천</a>
+                        <div>
+                            <table>
+                                <tr>
+                                    <td><a href="./travel/menu1.html">관광지도</a></td>
+                                    <td><a href="./menu2.html">추천여행</a><span class="menuCir"></span></td>
+                                    <td><a href="./menu3.html">테마추천</a></td>
+                                    <td><a href="./menu4_3.html">문의하기</a><span class="menuCir"></span></td>
+                                    <td><a href="./menu5.html">나의여행</a><span class="menuCir"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./travel/menu1.html">제주도소개</a><span class="menuCir"></span></td>
+                                    <td><a href="#">이달의추천</a></td>
+                                    <td><a href="#">테마코스추천</a></td>
+                                    <td><a href="./menu4.html">공지사항</a><span class="menuCir"></span></td>
+                                    <td><a href="#">찜한여행</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./travel/menu1_photo.html">포토갤러리</a><span class="menuCir"></span></td>
+                                    <td><a href="#">추천코스</a></td>
+                                    <td><a href="#">제주도 VR</a></td>
+                                    <td><a href="./menu4_2.html">이벤트</a><span class="menuCir"></span></td>
+                                    <td><a href="#">나의리뷰</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">제주이야기</a></td>
+                                    <td><a href="#">구석구석명소</a></td>
+                                    <td><a href="#">제주문화공연</a></td>
+                                    <td><a href="#">여행필수정보</a></td>
+                                    <td><a href="#">정보수정</a></td>
+                                </tr>
+                            </table>
+                            
+                        </div>
+                    </li>
+                    <li><a href="#">문의하기</a>
+                        <div>
+                            <table>
+                                <tr>
+                                    <td><a href="./travel/menu1.html">관광지도</a></td>
+                                    <td><a href="./menu2.html">추천여행</a><span class="menuCir"></span></td>
+                                    <td><a href="./menu3.html">테마추천</a></td>
+                                    <td><a href="./menu4_3.html">문의하기</a><span class="menuCir"></span></td>
+                                    <td><a href="./menu5.html">나의여행</a><span class="menuCir"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./travel/menu1.html">제주도소개</a><span class="menuCir"></span></td>
+                                    <td><a href="#">이달의추천</a></td>
+                                    <td><a href="#">테마코스추천</a></td>
+                                    <td><a href="./menu4.html">공지사항</a><span class="menuCir"></span></td>
+                                    <td><a href="#">찜한여행</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./travel/menu1_photo.html">포토갤러리</a><span class="menuCir"></span></td>
+                                    <td><a href="#">추천코스</a></td>
+                                    <td><a href="#">제주도 VR</a></td>
+                                    <td><a href="./menu4_2.html">이벤트</a><span class="menuCir"></span></td>
+                                    <td><a href="#">나의리뷰</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">제주이야기</a></td>
+                                    <td><a href="#">구석구석명소</a></td>
+                                    <td><a href="#">제주문화공연</a></td>
+                                    <td><a href="#">여행필수정보</a></td>
+                                    <td><a href="#">정보수정</a></td>
+                                </tr>
+                            </table>
+                            
+                        </div>
+                    </li>
+                    <li><a href="#">나의여행</a>
+                        <div>
+                            <table>
+                                <tr>
+                                    <td><a href="./travel/menu1.html">관광지도</a></td>
+                                    <td><a href="./menu2.html">추천여행</a><span class="menuCir"></span></td>
+                                    <td><a href="./menu3.html">테마추천</a></td>
+                                    <td><a href="./menu4.html">문의하기</a><span class="menuCir"></span></td>
+                                    <td><a href="./menu5.html">나의여행</a><span class="menuCir"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./travel/menu1.html">제주도소개</a><span class="menuCir"></span></td>
+                                    <td><a href="#">이달의추천</a></td>
+                                    <td><a href="#">테마코스추천</a></td>
+                                    <td><a href="./menu4.html">공지사항</a><span class="menuCir"></span></td>
+                                    <td><a href="#">찜한여행</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./travel/menu1_photo.html">포토갤러리</a><span class="menuCir"></span></td>
+                                    <td><a href="#">추천코스</a></td>
+                                    <td><a href="#">제주도 VR</a></td>
+                                    <td><a href="./menu4_2.html">이벤트</a><span class="menuCir"></span></td>
+                                    <td><a href="#">나의리뷰</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">제주이야기</a></td>
+                                    <td><a href="#">구석구석명소</a></td>
+                                    <td><a href="#">제주문화공연</a></td>
+                                    <td><a href="#">여행필수정보</a></td>
+                                    <td><a href="#">정보수정</a></td>
+                                </tr>
+                            </table>
+                            
+                        </div>
+                    </li>
+                    <li>외국인</li>
+                </ul>
+            </div>
+            <!-- <div class="gnb"></div> -->
+        </div>
+        <div class="topMenu">
+            <input type="checkbox" id="bars02">
+            <label for="bars02"> 
+            <span></span>
+            <span></span>
+            <span></span>
+            </label>
+        </div>
+        <div class="overlay">
+            <nav class="overlayMenu">
+                <ul>
+                    <li><a href="#">광광지도</a></li>
+                    <li><a href="#">추천여행</a></li>
+                    <li><a href="#">테마추천</a></li>
+                    <li><a href="#">커뮤니티</a></li>
+                    <li><a href="#">나의여행</a></li>
+                    <li><a href="#">외국인관광</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--헤더끝-->
+
+        <div class="contents">
+            <div class="shadow">
+                <div class="section1">
+                    <p class="mainText">커뮤니티</p>
+                </div>
+            </div>
+            <article>
+            <p> <span>홈 <i class="fas fa-leaf"></i></span> &nbsp;&gt;&nbsp; 커뮤니티 &nbsp;&gt;&nbsp; 공지사항</p>
+            </article>
+            <div class="btnQuickMenu">quick Menu</div>
+            <div class="btnContainer">
+                <div>
+                    <span>채용/입찰/모집</span>
+                    <p>공고</p>
+                </div>
+                <div>
+                    <span>제주관광공사</span>
+                    <p>보고서</p>
+                </div>
+                <div>
+                    <span>제주관광공사</span>
+                    <p>오시는길</p>
+                </div>
+                <div>
+                    <span>제주관광공사</span>
+                    <p>이미지 아카이브</p>
+                </div>
+            </div>
+
+            <div class="section2">
+                <div class="backImg"></div>
+                <h2>
+                    <img src="./img/logo.png" alt="">
+                    자주 묻는 질문
+                    <img src="./img/logo.png" alt="">
+                </h2>
+                <p>자주묻는질문을 모아 준비했습니다.</p>
+
+                <div class="section2Inner">
+                    
+                    
+                </div>
+            </div>
+
+            </div>
+            <div class="section3">
+                
+            </div>
+            
+            
+        </div>
+        <!--콘텐츠끝-->
+        <div class="footerTop"></div>
+       
+            <section class="footer" >
+                <div class="lastimg">
+                    <img src="./img/main_banner01.gif">
+                    <img src="./img/main_banner02.gif">
+                    <img src="./img/main_banner05.gif">
+                    <img src="./img/main_banner06.gif">
+                </div>
+                <div class="lastinfo">
+                    <a href="#"><i class="fas fa-user-friends"></i> 개인정보처리방침</a>
+                    <a href="#">영상정보처리기기 운영관리 방침</a>
+                    <a href="#">홈페이지 이용약관</a>
+                    <a href="#">위치정보 이용약관</a>
+                    <a href="#">서비스 이용약관</a>
+                    <a href="#">윤리경영 핫라인</a>
+                    <a href="#">제주관광사진이용</a>
+                    <a href="#">관광정보 등재/수정요청</a>
+                    <a href="#">JEJU TourAPI</a>
+                    <a href="#">Q & A</a>
+                </div>
+                <div class="lastbtn">
+                    <a href="#">찾아오시는 길</a>
+                    <a href="#">제주관광문의</a>
+                    <a href="#">사이트 맵</a>
+                </div>
+                <div class="last">
+                    <span> 사업자등록번호 : 010-9224-5158</span>
+                    <span> (주) 제주관광공사 : 제주특별자치도 제주시 </span>
+                    <span> &nbsp;TEL : 010-9224-5158 </span>
+                    <span> 개인정보 책임자 : 오가희</span>
+                    <p> ⓒ 2021 jeju toursim ogh010@naver.com All Rights Reserved.</p>
+                </div>
+            </section>
+        </div>
+        <!--푸터끝-->
+    </div>
+    
+<!--헤더스크롤-->
+<script>
+    $(function() {
+        var rollHeader = 100;
+        $(window).scroll(function() {
+            var scroll = getCurrentScroll();
+            if (scroll >= rollHeader) {
+                $('.header').addClass('roll');
+            } else {
+                $('.header').removeClass('roll');
+            }
+        });
+
+        function getCurrentScroll() {
+            return window.pageYOffset || document.documentElement.scrollTop;
+        }
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        /* 1 */
+        $(window).scroll(function() {
+            /* 2 */
+            $('.hideme').each(function(i) {
+                var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+                /* 3 */
+                if (bottom_of_window > bottom_of_object / 2) {
+                    $(this).animate({
+                        'opacity': '1'
+                    }, 2000);
+                }
+            });
+        });
+    });
+</script>
+</body></html>

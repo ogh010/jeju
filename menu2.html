@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>jejudo_gahee</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <script src="./js/quick.js"></script>
+  <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src=" http://maps.google.com/maps/api/js?v=3.3&sensor=true"></script>
+    <script type="text/javascript" src="jquery-ui-map-3.0-rc/ui/min/jquery.ui.map.full.min.js"></script>
+    <script type="text/javascript" src="jquery-ui-map-3.0-rc/ui/jquery.ui.map.extensions.js"></script>
+    <style>
+    @font-face {
+    font-family: 'BMHANNAAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.0/BMHANNAAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.header {
+    background-color: rgba(237, 237, 237, 0.24);
+}
+.header h1 a, .header .lnb a{color: rgb(95, 95, 95);}
+.header .lnb:hover a{color: #000;}
+.header .lnb>ul>li:nth-child(2)>a {
+            color: #ffa81c;
+        }
+
+        
+        .contents {
+            clear: both;
+            overflow: hidden;
+        }
+        .shadow{
+           width: 100%;
+            height: 600px;
+            overflow: hidden;
+        }
+
+        .section1 {
+            background-image: linear-gradient( rgba(237, 237, 237, 0.27), rgba(237, 237, 237, 0.24) ), url(./img/ban.jpg);
+            width: 100%;
+            height: 600px;
+            background-size: cover;
+            background-position: 50% 70%;
+            position: relative;
+            display: block;
+            animation: Ani 5s forwards
+        }
+        @keyframes Ani{
+            100%{transform: scale(1.1)}
+        }
+        
+        .section1 .mainText {
+            font-size: 50px;
+            color: #fff;
+            padding-top: 280px;
+            text-align: center;
+            font-family: 'WandohopeB';
+            text-shadow: 2px 0px 3px #000000;
+            font-weight: bold
+        }
+        article{
+            height: 70px;
+            width: 100%;
+            background-color: #fff;
+            line-height: 70px;
+            font-size: 16px;
+            
+        }
+        article>p{
+            margin-left: 150px;
+            line-height: 70px;
+            font-family: 'Noto Sans KR', sans-serif;
+            word-spacing: 0.2em
+        }
+        article span{
+            display: inline-block;
+            background-color: #7bc129;
+            box-sizing: border-box;
+            height: 70px;
+            width: 70px;
+            text-align: center;
+            color: #fff
+        }    
+        .section2 {
+            width: 100%;
+            margin: auto;
+        }
+        .section2>h2{margin-bottom: 20px;}
+        
+        .title{text-align: left; font-size: 22px; text-indent: 1em; line-height: 30px; margin: 20px 0;
+        font-weight: bold;}
+        .title>img{width: 30px; height: 30px;}
+        .section2 > p{margin-bottom: 130px;}
+        .section2 .pannelInner{display: flex; font-family: 'Noto Sans KR', sans-serif; font-weight: 100; }
+        .section2 .pannelText{width: 60%; height: 300px; padding: 1em; box-sizing: border-box; border: 1px dotted skyblue;}
+        .section2 .pannelText p{text-align:left ;line-height: 20px; 
+    font-size: 14px;}
+        .section2 .pannelText p:nth-of-type(2){margin-bottom: 5px;}
+        .section2 .pannelText p:nth-of-type(3){margin-bottom: 5px;}
+        .section2 .pannelText ul{overflow: hidden;}
+
+        .section2 .pannelText li{line-height: 20px; font-size: 16px; text-align: left; float: left; 
+            border: 1px solid #d4d4d4; margin: 15px 15px 15px 0; padding: 5px 7px;
+             background:none; cursor: pointer; transition: 0.2s;
+              color: #cc5dff; position: relative;}
+        .section2 .pannelText li:hover{ color: #fff; }
+        .section2 .pannelText li:hover::before{height: 100%;}
+        .section2 .pannelText li::before{content: ''; position: absolute; left: 0;
+        width: 100%; height: 0%; background-image: linear-gradient(19deg, #6ce4ff 0%, #d06aff 100%);  transition: 0.2s; bottom: 0;
+        border-radius: 50% 50% 0 0; z-index: -1;}   
+
+
+        
+        
+        .section2 .pannelText span{color: #00a71c; font-size: 15px; font-weight: bold; display: inline-block; width: 100px;}
+        .section2 .pannelMap{width: 40%;  height: 300px; box-sizing: border-box; border: 1px dotted skyblue;}
+        .section2 .pannelimg{overflow: hidden; background-position: center; background-size: cover; width:1020px;
+             margin: auto;}
+        .section2 .pannelimg div{margin: 5px; background-position: center;}
+        .section2 .pannelimg1 div:nth-child(1){background-image: url(./img/section2_2_1.jpg); width: 1010px; height: 400px;}
+        .section2 .pannelimg1 div:nth-child(2){background-image: url(./img/section2_2_2.jpg); 
+            width: 500px; height: 330px; float: left; }
+        .section2 .pannelimg1 div:nth-child(3){background-image: url(./img/section2_2_3.jpg);
+             width: 500px; height: 330px; float: left;}
+
+        .section2 .pannelimg2 div:nth-child(1){background-image: url(./img/section2_3_3.jpg); width: 1010px; height: 400px;}
+        .section2 .pannelimg2 div:nth-child(2){background-image: url(./img/section2_3_1.jpg); 
+            width: 500px; height: 330px; float: left; }
+        .section2 .pannelimg2 div:nth-child(3){background-image: url(./img/section2_3_2.jpg);
+             width: 500px; height: 330px; float: left;}
+
+        .section2 .pannelimg3 div:nth-child(1){background-image: url(./img/section2_4_1.jpg); width: 1010px; height: 400px;}
+        .section2 .pannelimg3 div:nth-child(2){background-image: url(./img/section2_4_2.jpg); 
+            width: 500px; height: 330px; float: left; background-position: center;}
+        .section2 .pannelimg3 div:nth-child(3){background-image: url(./img/section2_4_3.jpg);
+             width: 500px; height: 330px; float: left; background-position: center;}
+
+        .section2 .pannelimg4 div:nth-child(1){background-image: url(./img/section2_5_1.jpg); width: 1010px; height: 400px;
+        background-size: contain; background-position: center bottom 20%;}
+        .section2 .pannelimg4 div:nth-child(2){background-image: url(./img/section2_5_2.jpg); 
+            width: 500px; height: 330px; float: left; background-position: center;background-size: cover ;}
+        .section2 .pannelimg4 div:nth-child(3){background-image: url(./img/section2_5_3.jpg);
+             width: 500px; height: 330px; float: left; background-position: center;background-size: cover;}
+
+        .section2 .pannelimg5 div:nth-child(1){background-image: url(./img/section2_6_1.jpg); width: 1010px; height: 400px;
+        background-size: cover; background-position: center bottom 20%;}
+        .section2 .pannelimg5 div:nth-child(2){background-image: url(./img/section2_6_2.jpg); 
+            width: 500px; height: 330px; float: left; background-position: center bottom;background-size: cover ;}
+        .section2 .pannelimg5 div:nth-child(3){background-image: url(./img/section2_6_3.jpg);
+             width: 500px; height: 330px; float: left; background-position: center top;background-size: cover;}
+
+
+        .tabPaneel{width: 1201px; margin: auto; }
+        .tabPaneel>label{width: 238px; height: 60px;text-align: center;line-height: 60px;background-color: #ffa81c;
+    border: 1px solid #ffc363; color: #fff; display: block; float: left;border-bottom: none;font-size: 16px; 
+        transition: 0.2s;}
+        .tabPaneel>label:hover{background-color: #c78721; }
+        .tabPaneel>input:nth-of-type(1):checked~label:nth-of-type(1){background-color: #fff; color: #ffa81c;}
+        .tabPaneel>input:nth-of-type(2):checked~label:nth-of-type(2){background-color: #fff; color: #ffa81c;}
+        .tabPaneel>input:nth-of-type(3):checked~label:nth-of-type(3){background-color: #fff; color: #ffa81c;}
+        .tabPaneel>input:nth-of-type(4):checked~label:nth-of-type(4){background-color: #fff; color: #ffa81c;}
+        .tabPaneel>input:nth-of-type(5):checked~label:nth-of-type(5){background-color: #fff; color: #ffa81c;}
+        
+        /* 일러스트 탭 */
+        
+        .tabPaneel .tabImg{width: 50px; height: 50px;  top: -50px; left: 10px; }
+
+        .tabPaneel>label:nth-child(1){position: relative;}
+        .tabPaneel .tab1Img{background: url(./img/nature.gif) no-repeat; 
+        background-size: contain; position: relative;  top: -52px;
+        animation:bounce 2s infinite ;}
+
+        .tabPaneel>label:nth-child(2){position: relative;}
+        .tab2Img{background: url(./img/dungdae.gif) no-repeat; 
+       background-size: contain; position: relative; 
+        animation:bounce 2s infinite; display: none;}
+
+        .tabPaneel>label:nth-child(3){position: relative;}
+        .tabPaneel .tab3Img{background: url(./img/bike.gif) no-repeat; 
+         background-size: contain; position: relative; top: -28px;
+        animation:bounce 2s infinite; display: none;}
+
+        .tabPaneel>label:nth-child(4){position: relative;}
+        .tab4Img{background: url(./img/dong.gif) no-repeat; 
+         background-size: contain; position: relative;
+        animation:bounce 2s infinite; display: none; }
+
+        .tabPaneel>label:nth-child(5){position: relative;}
+        .tabPaneel .tab5Img{background: url(./img/sum.gif) no-repeat; 
+        background-size: contain; position: relative; top: -32px;
+        animation:bounce 2s infinite; display: none; }
+
+        
+
+        input[type='radio']{display: none;}
+        .pannel{clear: both;}
+        .pannel>li{border: 1px solid #afafaf; text-align:center; line-height: 300px; 
+            font-size: 30px; display: none;}
+        .tabPaneel>input:nth-of-type(1):checked~.pannel>li:nth-of-type(1){display: block;}
+        .tabPaneel>input:nth-of-type(2):checked~.pannel>li:nth-of-type(2){display: block;}
+        .tabPaneel>input:nth-of-type(3):checked~.pannel>li:nth-of-type(3){display: block;}
+        .tabPaneel>input:nth-of-type(4):checked~.pannel>li:nth-of-type(4){display: block;}
+        .tabPaneel>input:nth-of-type(5):checked~.pannel>li:nth-of-type(5){display: block;}
+        
+        .pageNum{overflow: hidden; margin: auto;display: flex; justify-content: center; padding: 25px 0; font-family: 'Noto Sans KR', sans-serif;}
+        .pageNum ul{}
+        .pageNum li{line-height: 20px; font-size: 12px; float: left; margin-right: 1.5em; }
+        .pageNum li:nth-child(1){background-color: #1ca4ff33; padding: 0 5px; }
+        .pageNum a{display: block; color: #666;}
+        
+
+        .footerTop{
+            background: linear-gradient(transparent, #9b9385);
+            height: 200px;
+            width: 100%;
+            overflow: hidden
+        }
+        .footer {
+            overflow: hidden;
+        }
+
+        /* map */
+        .pannelMap .map {width: 300px;height: 230px; z-index: 99; display: block;}
+    </style>
+    <script>
+        $(function(){
+            $('label:nth-of-type(1)').click(function(){
+                $('.tab1Img').css('display','block');
+                $('.tab2Img').css('display','none');
+                $('.tab3Img').css('display','none');
+                $('.tab4Img').css('display','none');
+                $('.tab5Img').css('display','none');
+            })
+        })
+        $(function(){
+            $('label:nth-of-type(2)').click(function(){
+                $('.tab1Img').css('display','none');
+                $('.tab2Img').css('display','block');
+                $('.tab3Img').css('display','none');
+                $('.tab4Img').css('display','none');
+                $('.tab5Img').css('display','none');
+            })
+        })
+        $(function(){
+            $('label:nth-of-type(3)').click(function(){
+                $('.tab1Img').css('display','none');
+                $('.tab2Img').css('display','none');
+                $('.tab3Img').css('display','block');
+                $('.tab4Img').css('display','none');
+                $('.tab5Img').css('display','none');
+            })
+        })
+        $(function(){
+            $('label:nth-of-type(4)').click(function(){
+                $('.tab1Img').css('display','none');
+                $('.tab2Img').css('display','none');
+                $('.tab3Img').css('display','none');
+                $('.tab4Img').css('display','block');
+                $('.tab5Img').css('display','none');
+            })
+        })
+        $(function(){
+            $('label:nth-of-type(5)').click(function(){
+                $('.tab1Img').css('display','none');
+                $('.tab2Img').css('display','none');
+                $('.tab3Img').css('display','none');
+                $('.tab4Img').css('display','none');
+                $('.tab5Img').css('display','block');
+            })
+        })
+    </script>
+</head>
+
+<body>
+
+    <div id="container">
+        <div class="header">
+            <h1><a href="./index.html">JeJu</a>
+            </h1>
+            <div class="lnb">
+                <ul>
+                    <li>
+                        <a href="#">관광지도</a>
+                        <div>
+                            <table>
+                                <tr>
+                                    <td><a href="./travel/menu1.html">관광지도</a></td>
+                                    <td><a href="./menu2.html">추천여행</a><span class="menuCir"></span></td>
+                                    <td><a href="./menu3.html">테마추천</a></td>
+                                    <td><a href="./menu4_3.html">문의하기</a><span class="menuCir"></span></td>
+                                    <td><a href="./menu5.html">나의여행</a><span class="menuCir"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./travel/menu1.html">제주도소개</a><span class="menuCir"></span></td>
+                                    <td><a href="#">이달의추천</a></td>
+                                    <td><a href="#">테마코스추천</a></td>
+                                    <td><a href="./menu4.html">공지사항</a><span class="menuCir"></span></td>
+                                    <td><a href="#">찜한여행</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./travel/menu1_photo.html">포토갤러리</a><span class="menuCir"></span></td>
+                                    <td><a href="#">추천코스</a></td>
+                                    <td><a href="#">제주도 VR</a></td>
+                                    <td><a href="./menu4_2.html">이벤트</a><span class="menuCir"></span></td>
+                                    <td><a href="#">나의리뷰</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">제주이야기</a></td>
+                                    <td><a href="#">구석구석명소</a></td>
+                                    <td><a href="#">제주문화공연</a></td>
+                                    <td><a href="#">여행필수정보</a></td>
+                                    <td><a href="#">정보수정</a></td>
+                                </tr>
+                            </table>
+                            
+                        </div>
+                    </li>
+                    <li><a href="#">추천여행</a>
+                        <div>
+                            <table>
+                                <tr>
+                                    <td><a href="./travel/menu1.html">관광지도</a></td>
+                                    <td><a href="./menu2.html">추천여행</a><span class="menuCir"></span></td>
+                                    <td><a href="./menu3.html">테마추천</a></td>
+                                    <td><a href="./menu4_3.html">문의하기</a><span class="menuCir"></span></td>
+                                    <td><a href="./menu5.html">나의여행</a><span class="menuCir"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./travel/menu1.html">제주도소개</a><span class="menuCir"></span></td>
+                                    <td><a href="#">이달의추천</a></td>
+                                    <td><a href="#">테마코스추천</a></td>
+                                    <td><a href="./menu4.html">공지사항</a><span class="menuCir"></span></td>
+                                    <td><a href="#">찜한여행</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./travel/menu1_photo.html">포토갤러리</a><span class="menuCir"></span></td>
+                                    <td><a href="#">추천코스</a></td>
+                                    <td><a href="#">제주도 VR</a></td>
+                                    <td><a href="./menu4_2.html">이벤트</a><span class="menuCir"></span></td>
+                                    <td><a href="#">나의리뷰</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">제주이야기</a></td>
+                                    <td><a href="#">구석구석명소</a></td>
+                                    <td><a href="#">제주문화공연</a></td>
+                                    <td><a href="#">여행필수정보</a></td>
+                                    <td><a href="#">정보수정</a></td>
+                                </tr>
+                            </table>
+                            
+                        </div>
+                    </li>
+                    <li><a href="#">테마추천</a>
+                        <div>
+                            <table>
+                                <tr>
+                                    <td><a href="./travel/menu1.html">관광지도</a></td>
+                                    <td><a href="./menu2.html">추천여행</a><span class="menuCir"></span></td>
+                                    <td><a href="./menu3.html">테마추천</a></td>
+                                    <td><a href="./menu4_3.html">문의하기</a><span class="menuCir"></span></td>
+                                    <td><a href="./menu5.html">나의여행</a><span class="menuCir"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./travel/menu1.html">제주도소개</a><span class="menuCir"></span></td>
+                                    <td><a href="#">이달의추천</a></td>
+                                    <td><a href="#">테마코스추천</a></td>
+                                    <td><a href="./menu4.html">공지사항</a><span class="menuCir"></span></td>
+                                    <td><a href="#">찜한여행</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./travel/menu1_photo.html">포토갤러리</a><span class="menuCir"></span></td>
+                                    <td><a href="#">추천코스</a></td>
+                                    <td><a href="#">제주도 VR</a></td>
+                                    <td><a href="./menu4_2.html">이벤트</a><span class="menuCir"></span></td>
+                                    <td><a href="#">나의리뷰</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">제주이야기</a></td>
+                                    <td><a href="#">구석구석명소</a></td>
+                                    <td><a href="#">제주문화공연</a></td>
+                                    <td><a href="#">여행필수정보</a></td>
+                                    <td><a href="#">정보수정</a></td>
+                                </tr>
+                            </table>
+                            
+                        </div>
+                    </li>
+                    <li><a href="#">문의하기</a>
+                        <div>
+                            <table>
+                                <tr>
+                                    <td><a href="./travel/menu1.html">관광지도</a></td>
+                                    <td><a href="./menu2.html">추천여행</a><span class="menuCir"></span></td>
+                                    <td><a href="./menu3.html">테마추천</a></td>
+                                    <td><a href="./menu4_3.html">문의하기</a><span class="menuCir"></span></td>
+                                    <td><a href="./menu5.html">나의여행</a><span class="menuCir"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./travel/menu1.html">제주도소개</a><span class="menuCir"></span></td>
+                                    <td><a href="#">이달의추천</a></td>
+                                    <td><a href="#">테마코스추천</a></td>
+                                    <td><a href="./menu4.html">공지사항</a><span class="menuCir"></span></td>
+                                    <td><a href="#">찜한여행</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./travel/menu1_photo.html">포토갤러리</a><span class="menuCir"></span></td>
+                                    <td><a href="#">추천코스</a></td>
+                                    <td><a href="#">제주도 VR</a></td>
+                                    <td><a href="./menu4_2.html">이벤트</a><span class="menuCir"></span></td>
+                                    <td><a href="#">나의리뷰</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">제주이야기</a></td>
+                                    <td><a href="#">구석구석명소</a></td>
+                                    <td><a href="#">제주문화공연</a></td>
+                                    <td><a href="#">여행필수정보</a></td>
+                                    <td><a href="#">정보수정</a></td>
+                                </tr>
+                            </table>
+                            
+                        </div>
+                    </li>
+                    <li><a href="#">나의여행</a>
+                        <div>
+                            <table>
+                                <tr>
+                                    <td><a href="./travel/menu1.html">관광지도</a></td>
+                                    <td><a href="./menu2.html">추천여행</a><span class="menuCir"></span></td>
+                                    <td><a href="./menu3.html">테마추천</a></td>
+                                    <td><a href="./menu4.html">문의하기</a><span class="menuCir"></span></td>
+                                    <td><a href="./menu5.html">나의여행</a><span class="menuCir"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./travel/menu1.html">제주도소개</a><span class="menuCir"></span></td>
+                                    <td><a href="#">이달의추천</a></td>
+                                    <td><a href="#">테마코스추천</a></td>
+                                    <td><a href="./menu4.html">공지사항</a><span class="menuCir"></span></td>
+                                    <td><a href="#">찜한여행</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./travel/menu1_photo.html">포토갤러리</a><span class="menuCir"></span></td>
+                                    <td><a href="#">추천코스</a></td>
+                                    <td><a href="#">제주도 VR</a></td>
+                                    <td><a href="./menu4_2.html">이벤트</a><span class="menuCir"></span></td>
+                                    <td><a href="#">나의리뷰</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">제주이야기</a></td>
+                                    <td><a href="#">구석구석명소</a></td>
+                                    <td><a href="#">제주문화공연</a></td>
+                                    <td><a href="#">여행필수정보</a></td>
+                                    <td><a href="#">정보수정</a></td>
+                                </tr>
+                            </table>
+                            
+                        </div>
+                    </li>
+                    <li>외국인</li>
+                </ul>
+            </div>
+            <!-- <div class="gnb"></div> -->
+        </div>
+        <div class="topMenu">
+            <input type="checkbox" id="bars02">
+            <label for="bars02"> 
+            <span></span>
+            <span></span>
+            <span></span>
+            </label>
+        </div>
+        <div class="overlay">
+            <nav class="overlayMenu">
+                <ul>
+                    <li><a href="#">광광지도</a></li>
+                    <li><a href="#">추천여행</a></li>
+                    <li><a href="#">테마추천</a></li>
+                    <li><a href="#">커뮤니티</a></li>
+                    <li><a href="#">나의여행</a></li>
+                    <li><a href="#">외국인관광</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        
+        <!--헤더끝-->
+
+        <div class="contents">
+            <div class="shadow">
+                <div class="section1">
+                    <p class="mainText">추천여행</p>
+                </div>
+            </div>
+            <article>
+            <p> <span>홈 <i class="fas fa-leaf"></i></span> &nbsp;&gt;&nbsp; 추천여행 &nbsp;&gt;&nbsp; 추천코스</p>
+            </article>
+            <div class="btnQuickMenu">quick Menu</div>
+            <div class="btnContainer">
+                <div>
+                    <span>채용/입찰/모집</span>
+                    <p>공고</p>
+                </div>
+                <div>
+                    <span>제주관광공사</span>
+                    <p>보고서</p>
+                </div>
+                <div>
+                    <span>제주관광공사</span>
+                    <p>오시는길</p>
+                </div>
+                <div>
+                    <span>제주관광공사</span>
+                    <p>이미지 아카이브</p>
+                </div>
+            </div>
+            
+            <!-- <div id="map">
+                
+                <div id="daumRoughmapContainer1615796996459" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+                
+                <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                
+                <script charset="UTF-8">
+                    new daum.roughmap.Lander({
+                        "timestamp": "1615796996459",
+                        "key": "24uc8",
+                        "mapWidth": "1000",
+                        "mapHeight": "600"
+                    }).render();
+                </script>
+
+            </div> -->
+
+            <div class="section2">
+                <h2>
+                    <img src="./img/logo.png" alt="">
+                    제주도 모든 여행지를 한 눈에…
+                    <img src="./img/logo.png" alt="">
+                </h2>
+                <p>여러분이 가본 제주는 어디까지인가요? 수많은 제주의 아름다운 여행지를 취향에 맞게 선택해봅시다. <br>
+                    368개의 크고 작은 오름을 비롯하여 눈 돌리면 어디에서나 마주치는 한라산 그리고 푸른 바다…. <br>
+                    제주의 보석 같은 여행지가 여러분의 선택을 기다립니다.
+                </p>
+                <div class="tabPaneel">
+                    
+                    <input type="radio" name="tab" id="tab1" checked>
+                    <input type="radio" name="tab" id="tab2">
+                    <input type="radio" name="tab" id="tab3">
+                    <input type="radio" name="tab" id="tab4">
+                    <input type="radio" name="tab" id="tab5">
+                    
+                    <label for="tab1">자연<div class="tabImg tab1Img"></div></label>
+                    <label for="tab2">문화관광<div class="tabImg tab2Img"></div></label>
+                    <label for="tab3">레저체험<div class="tabImg tab3Img"></div></label>
+                    <label for="tab4">테마관광지<div class="tabImg tab4Img"></div></label>
+                    <label for="tab5">섬속의섬<div class="tabImg tab5Img"></div></label>
+                    <ul class="pannel">
+                        <li>
+                            <h3 class="title"><img src="./img/logo.png" alt="">천제연 폭포</h3>
+                            <div class="pannelInner">
+                                <div class="pannelText">
+                                    <p>
+                                        천제연 폭포는 한라산에서 시작된 중문천이 바다로 흐르면서 형성된 폭포로, 중문관광단지 내에 있다.<br><br>
+
+                                        천제연폭포는 3개의 폭포로 나뉘어 지는데, 주상절리 절벽에서 천제연(못)으로 떨어지는 것이 제1폭포,<br> 
+                                        천제연의 물이 더 아래로 흐르면서 형성된 제2,3폭포가 있다.
+                                    </p>
+                                    <ul>
+                                        <li>#폭포</li>
+                                        <li>#경관/포토</li>
+                                        <li>#커플</li>
+                                        <li>#아이</li>
+                                        <li>#맑음</li>
+                                        <li>#여름</li>
+                                    </ul>
+                                    <p><span><i class="fas fa-map-marker-alt"></i> 주소</span> 제주특별자치도 서귀포시 천제연로 132(중문동) </p>
+                                    <p><span><i class="fas fa-phone-alt"></i> 전화번호</span> (+82) 064-760-6331 </p>
+                                    <p><span><i class="fas fa-home"></i> 홈페이지</span> <a href="http://www.visitjeju.net">http://www.visitjeju.net</a> </p>
+                                </div>
+                                <style>
+                                    
+                                </style>
+                                <div class="pannelMap"> 
+                                    <div class="map" id="map_canvas"></div>
+                                </div>
+                            </div>
+                            <div class="pannelimg pannelimg1">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+
+                            </div>
+                            <ul class="pageNum">
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li><a href="#">7</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">10</a></li>
+                                <li><a href="#">다음 <i class="fas fa-chevron-right"></i></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="title"><img src="./img/logo.png" alt="">이중섭거리</h3>
+                            <div class="pannelInner">
+                                <div class="pannelText">
+                                    <p>
+                                        40세의 젊은 나이에 요절한 천재화가 이중섭을 기리기 위해 피난당시 거주했던 초가를 중심으로 조성된 거리이다.<br><br>
+                                        1996년에 사업체가 창단하고 1997년 9월 복원되었다.<br>
+                                        주변에는 이중섭의 삽화가 들어간 기념품이나 각종 수공예품, 편집샵 등이 즐비해 있으며,<br>
+                                        수제버거, 피쉬앤칩스 음식점 등 젊은이들에게 인기있는 맛집도 어렵지 않게 찾아볼 수 있다.<br>
+                                        서귀포에 머물며 명작을 남긴 예술가들의 삶의 자취를 더둠어보는 작가의 산책길도 조성되어 있다.<br>
+                                    </p>
+                                    <ul>
+                                        <li>#예술</li>
+                                        <li>#걷기</li>
+                                        <li>#등산</li>
+                                        <li>#커플</li>
+                                        <li>#맑음</li>
+                                        <li>#가을</li>
+                                    </ul>
+                                    <p><span><i class="fas fa-map-marker-alt"></i> 주소</span> 제주특별자치도 서귀포시 이중섭로 4-1 (서귀동) </p>
+                                    <p><span><i class="fas fa-phone-alt"></i> 전화번호</span> (+82)  -- </p>
+                                    <p><span><i class="fas fa-home"></i> 홈페이지</span> <a href="http://www.visitjeju.net">http://www.visitjeju.net</a> </p>
+                                </div>
+                                <div class="pannelMap">
+                                    
+                                </div>
+                            </div>
+                            <div class="pannelimg pannelimg2">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+
+                            </div>
+                            <ul class="pageNum">
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li><a href="#">7</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">10</a></li>
+                                <li><a href="#">다음 <i class="fas fa-chevron-right"></i></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="title"><img src="./img/logo.png" alt="">제주레일바이크</h3>
+                            <div class="pannelInner">
+                                <div class="pannelText">
+                                    <p>
+                                        제주레일바이크는 바퀴가 4개 달린 자전거를 타고 철로를 달리며, 경관을 즐기는 레저관광 중 하나이다.<br>
+                                        구좌읍 주변의 오름과 우도, 성산일출봉 등을 조망할 수 있을 뿐 아니라, ​​​​​​<br>
+                                        목장이 함께 운영되고 있어 방목된 100여 마리의 소를 감상할 수 있다. <br>
+                                    </p>
+                                    <ul>
+                                        <li>#친구</li>
+                                        <li>#경관/포토</li>
+                                        <li>#체험관광</li>
+                                        <li>#액티비티</li>
+                                        <li>#우수관광사업체</li>
+                                        <li>#가을</li>
+                                    </ul>
+                                    <p><span><i class="fas fa-map-marker-alt"></i> 주소</span> 제주특별자치도 제주시 구좌읍 용눈이오름로 641 </p>
+                                    <p><span><i class="fas fa-phone-alt"></i> 전화번호</span> (+82) 064-783-0033</p>
+                                    <p><span><i class="fas fa-home"></i> 홈페이지</span> <a href="http://www.jejurailpark.com">www.jejurailpark.com</a> </p>
+                                </div>
+                                <div class="pannelMap">
+                                   
+                                </div>
+                            </div>
+                            <div class="pannelimg pannelimg3">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+
+                            </div>
+                            <ul class="pageNum">
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li><a href="#">7</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">10</a></li>
+                                <li><a href="#">다음 <i class="fas fa-chevron-right"></i></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="title"><img src="./img/logo.png" alt="">카멜리아힐</h3>
+                            <div class="pannelInner">
+                                <div class="pannelText">
+                                    <p>
+                                        카멜리아힐은 동양에서 가장 큰 동백 수목원으로 토종 동백부터 아기 동백, 유럽 동백 등 <br>
+                                        80여 개국 500여 품종의 수많은 동백꽃을 만날 수 있다.<br><br>
+
+                                        어디 동백꽃뿐이랴.<br>
+                                        여름이 시작되면 파란 하늘을 닮은 수국 꽃이 관람객들을 맞이하고 가을에는 억새와 핑크뮬리가 가을 정원을<br>
+                                        가득 채운다.
+
+                                    </p>
+                                    <ul>
+                                        <li>#경관/포토</li>
+                                        <li>#커플</li>
+                                        <li>#아이</li>
+                                        <li>#맑음</li>
+                                        <li>#겨울</li>
+                                        <li>#우수관광사업체</li>
+                                    </ul>
+                                    <p><span><i class="fas fa-map-marker-alt"></i> 주소</span> 제주 서귀포시 안덕면 병악로 166 </p>
+                                    <p><span><i class="fas fa-phone-alt"></i> 전화번호</span> (+82) 064-792-0088</p>
+                                    <p><span><i class="fas fa-home"></i> 홈페이지</span><a href="http://www.camelliahill.co.kr/"> www.camelliahill.co.kr/ </a></p>
+                                </div>
+                                <div class="pannelMap">
+                                    
+                                </div>
+                            </div>
+                            <div class="pannelimg pannelimg4">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+
+                            </div>
+                            <ul class="pageNum">
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li><a href="#">7</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">10</a></li>
+                                <li><a href="#">다음 <i class="fas fa-chevron-right"></i></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="title"><img src="./img/logo.png" alt="">형제섬</h3>
+                            <div class="pannelInner">
+                                <div class="pannelText">
+                                    <p>
+                                        형제섬은 산방산 바로 앞에서 내려다보이는 무인도로, 사계리 포구에서 남쪽으로 1,5km 떨어진 지점에 위치하며,<br>
+                                         크고 작은 섬이 마치 형제처럼 마주하며 떠 있다. 길고 큰 섬을 본섬, 작은 섬은 옷섬이라 부른다. <br><br>
+                                         본섬에는 작은 모래사장이 있으며 옷섬에 있는 주상절리층은 일품이다.<br>
+                                         이곳은 낚시포인트로도 유명한데 형제섬의 수중아치는 다이버들에게 잘 알려져 있으며<br>
+                                          해송, 연산호, 군락과 함께 자리돔, 줄도화돔 떼들의 유영이 만들어 내는 비경을 즐길 수 있다.
+
+                                    </p>
+                                    <ul>
+                                        <li>#커플</li>
+                                        <li>#친구</li>
+                                        <li>#혼자</li>
+                                        <li>#경관/포토</li>
+                                        <li>#일몰</li>
+                                        <li>#일출</li>
+                                    </ul>
+                                    <p><span><i class="fas fa-map-marker-alt"></i> 주소</span> 제주특별자치도 서귀포시 안덕면 사계리 산 44 </p>
+                                    <p><span><i class="fas fa-phone-alt"></i> 전화번호</span> (+82) 064-760-2913</p>
+                                    
+                                </div>
+                                <div class="pannelMap">
+                                    
+                                </div>
+                            </div>
+                            <div class="pannelimg pannelimg5">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+
+                            </div>
+                            <ul class="pageNum">
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li><a href="#">7</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">10</a></li>
+                                <li><a href="#">다음 <i class="fas fa-chevron-right"></i></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                
+                
+              
+
+
+                </div>
+            </div>
+            
+            
+        </div>
+        <!--콘텐츠끝-->
+        <div class="footerTop"></div>
+        <div class="footer">
+            <section class="footer">
+                <div class="lastimg">
+                    <img src="./img/main_banner01.gif">
+                    <img src="./img/main_banner02.gif">
+                    <img src="./img/main_banner05.gif">
+                    <img src="./img/main_banner06.gif">
+                </div>
+                <div class="lastinfo">
+                    <a href="#"><i class="fas fa-user-friends"></i> 개인정보처리방침</a>
+                    <a href="#">영상정보처리기기 운영관리 방침</a>
+                    <a href="#">홈페이지 이용약관</a>
+                    <a href="#">위치정보 이용약관</a>
+                    <a href="#">서비스 이용약관</a>
+                    <a href="#">윤리경영 핫라인</a>
+                    <a href="#">제주관광사진이용</a>
+                    <a href="#">관광정보 등재/수정요청</a>
+                    <a href="#">JEJU TourAPI</a>
+                    <a href="#">Q & A</a>
+                </div>
+                <div class="lastbtn">
+                    <a href="#">찾아오시는 길</a>
+                    <a href="#">제주관광문의</a>
+                    <a href="#">사이트 맵</a>
+                </div>
+                <div class="last">
+                    <span> 사업자등록번호 : 010-9224-5158</span>
+                    <span> (주) 제주관광공사 : 제주특별자치도 제주시 </span>
+                    <span> &nbsp;TEL : 010-9224-5158 </span>
+                    <span> 개인정보 책임자 : 오가희</span>
+                    <p> ⓒ 2021 jeju toursim ogh010@naver.com All Rights Reserved.</p>
+                </div>
+            </section>
+        </div>
+        <!--푸터끝-->
+    </div>
+    
+<!--헤더스크롤-->
+<script>
+    $(function() {
+        var rollHeader = 100;
+        $(window).scroll(function() {
+            var scroll = getCurrentScroll();
+            if (scroll >= rollHeader) {
+                $('.header').addClass('roll');
+            } else {
+                $('.header').removeClass('roll');
+            }
+        });
+
+        function getCurrentScroll() {
+            return window.pageYOffset || document.documentElement.scrollTop;
+        }
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        /* 1 */
+        $(window).scroll(function() {
+            /* 2 */
+            $('.hideme').each(function(i) {
+                var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+                /* 3 */
+                if (bottom_of_window > bottom_of_object / 2) {
+                    $(this).animate({
+                        'opacity': '1'
+                    }, 2000);
+                }
+            });
+        });
+    });
+</script>
+<script>
+    var s = new google.maps.LatLng(33.25086517139185, 126.4167833263993);
+    $('#map_canvas').gmap({
+        "center": s,
+        "zoom": 16
+    });
+</script>
+</body></html>
